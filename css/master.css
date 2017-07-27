@@ -1,0 +1,115 @@
+/*重置样式 可以覆盖*/
+body,div,p,ul,ol,dl,dt,dd,li,form,input,table,th,td,img,h1,h2,h3,h4,h5,h6 { margin: 0;padding: 0;}
+
+
+body { background: #FFF; color: #000; font-size: 12px; font-style: normal; font-family:'Microsoft Yahei','寰蒋闆呴粦','Simsun','瀹嬩綋','Arial', sans-serif;}
+em, b, i { font-style:normal;}
+li { list-style:none;}
+img { border:none;}
+a { text-decoration:none; color:#244666;}
+a:hover { text-decoration:underline; color:#f50;}
+table { border-spacing:0; border-collapse:collapse;}
+
+/*.layout{width: 960px;}?????*/
+
+/*通用*/
+.hide {display: none;}
+.flt {float:left;}
+.frt {float:right;}
+.clear { clear: both;}
+.clearfix { *zoom: 1;} 
+.clearfix:before, .clearfix:after { display: table; line-height: 0; content: "";}
+.clearfix:after { clear: both;}
+
+
+/*被注释掉的都是可以精简的代码*/
+
+.wrap{
+    width: 960px;
+    min-height: 800px;
+    margin: 0 auto;
+}
+
+.navbox{
+/*    width: 960px;*/
+    height: 50px;
+    background: #08c;
+    
+}
+
+.navbox > ul > li {
+    float: left;
+    width: 160px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+.navbox ul li a{
+    color: #fff;
+    display: block; 
+    background: #08c;
+/*   display:block-- 把a标签转换为块状元素，方便下面a：hover的操作*/
+}
+.navbox ul li a:hover{ 
+/*
+    width: 100%;
+    height: 50px;
+*/
+    background-color: #FFF;
+    text-decoration: none;
+}
+
+/*当导航盒子的ul li标签被鼠标覆盖时  二级导航-- 显示*/
+.navbox ul li:hover .subnav{ 
+    display: block;
+}
+
+.subnav {
+    display: none;
+}
+
+.subnav > li{
+    position: relative;
+}
+.threenav{
+    position: absolute;
+    width: 160px;
+    top: 0;
+    left: 160px;
+}
+
+/*二级导航的三级导航 ---隐藏*/
+.subnav .threenav{
+    display: none;
+}
+/*当二级导航的li标签被覆盖时 的三级导航执行 显示 宽高 背景*/
+.subnav li:hover .threenav{
+    display: block;
+    width: 120px;
+}
+
+/*注意父级子级的关系 subnav的子级是li 不是ul !!!!!*/
+
+
+
+.threenav .fournav {
+    display: none;
+}
+
+
+.threenav > li{
+    position: relative;
+}
+
+.fournav{
+    position: absolute;
+    width:120px;
+    left: 120px;
+    top: 0;
+}
+
+.threenav li:hover .fournav{
+    display: block;
+    
+}
+
